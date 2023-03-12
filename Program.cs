@@ -10,3 +10,27 @@ for (int i = 0; i < inArray.Length; i++)
 }
 System.Console.Write("Input Array strings: ");
 System.Console.WriteLine(String.Join(", ", inArray));
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+string[] ModificyString(string[] input, int size)
+{
+    int size2 = 0;
+    for (int i = 0; i < size; i++)
+    {
+        if(CountChar(input[i]) <= taskLength) size2++;
+    }
+    string[] output = new string [size2];
+    int j = 0;
+    for (int i = 0; i < input.Length; i++)
+    {
+        if(CountChar(input[i]) <= taskLength) 
+        {
+            output[j] = input[i];
+            if (j == taskLength) break;
+            j++;
+        }
+    }
+    return output;
+}
