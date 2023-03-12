@@ -11,6 +11,9 @@ for (int i = 0; i < inArray.Length; i++)
 System.Console.Write("Input Array strings: ");
 System.Console.WriteLine(String.Join(", ", inArray));
 
+System.Console.Write("Output strings: ");
+System.Console.WriteLine(String.Join(", ", ModificyString(inArray, taskLength)));
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////
