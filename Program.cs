@@ -34,3 +34,14 @@ string[] ModificyString(string[] input, int size)
     }
     return output;
 }
+
+
+int CountChar(string check)  //Считает количество элементов в строке 
+{
+    int count = 0;
+    foreach (char element in check)
+    {
+        count++;
+    }
+    return count;
+}
