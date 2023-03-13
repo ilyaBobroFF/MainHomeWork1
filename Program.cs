@@ -11,14 +11,16 @@ for (int i = 0; i < inArray.Length; i++)
 System.Console.Write("Input Array strings: ");
 System.Console.WriteLine(String.Join(", ", inArray));
 
-System.Console.Write("Output strings: ");
+System.Console.Write("Output Array strings: ");
 System.Console.WriteLine(String.Join(", ", ModificyString(inArray, taskLength)));
 
 
 
 ///////////////////////////////////////////////////////////////////////////////////
-string[] ModificyString(string[] input, int size)
-{
+
+
+string[] ModificyString(string[] input, int taskLength) // Находит строки длина которой меньше или равна заданной. 
+{                                                       // Пробел считает символом.
     int size2 = 0;
     for (int i = 0; i < size; i++)
     {
@@ -31,13 +33,11 @@ string[] ModificyString(string[] input, int size)
         if(CountChar(input[i]) <= taskLength) 
         {
             output[j] = input[i];
-            if (j == taskLength) break;
             j++;
         }
     }
     return output;
 }
-
 
 int CountChar(string check)  //Считает количество элементов в строке 
 {
